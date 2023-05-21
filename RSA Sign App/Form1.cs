@@ -7,7 +7,7 @@ namespace RSA_Sign_App
         SHA1,
         SHA512,
         SHA256
-     
+
     }
     public partial class Form1 : Form
     {
@@ -85,12 +85,12 @@ namespace RSA_Sign_App
             string strHashalg = cboRsaSHAkey.Text;
 
             // Validate each field
-            if (strBaseStringValue == "Place Your Base String Here" || strBaseStringValue == "")
+            if (strBaseStringValue == "Tekstas" || strBaseStringValue == "")
             {
                 MessageBox.Show("Base String Column cannot be empty");
                 return;
             }
-            if (strSignature == "Place Your Signature Here (If any)" || strSignature == "")
+            if (strSignature == "Parasas" || strSignature == "")
             {
                 MessageBox.Show("signature Column cannot be empty");
                 return;
@@ -107,14 +107,14 @@ namespace RSA_Sign_App
 
             if (IsValid)
             {
-                MessageBox.Show("This is a valid Signature. Hence you can trust the sender");
+                MessageBox.Show("Patvirtinta");
             }
             else
             {
-                MessageBox.Show("Oh No this not  a valid signature.Please Don't Trust the sender");
+                MessageBox.Show("Nepatvirtinta");
             }
 
-         
+
         }
     }
 }
